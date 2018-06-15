@@ -23,6 +23,9 @@ https://www.anaconda.com/download.
 Please do at least the download and install of Anaconda before coming to the tutorial!
 We can help with further setup at the tutorial.
 
+After installing Anaconda you can test your installation using
+[these instructions](https://conda.io/docs/user-guide/install/test-installation.html).
+
 If you'd like to do your own setup, we'll be using the following Python libraries:
 
 - [Jupyter Notebook](https://jupyter.org/)
