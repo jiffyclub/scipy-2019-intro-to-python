@@ -43,7 +43,7 @@ help you get more acquainted with Python and other programming fundamentals.
     - [Formatting Inputs and Outputs like Strings, Files](https://docs.python.org/3/tutorial/inputoutput.html)
   - [Built-in Functions](https://docs.python.org/3/library/functions.html)
   - [Built-in Types](https://docs.python.org/3/library/stdtypes.html)
-- Software Carpentry
+- [Software Carpentry](https://software-carpentry.org/)
   - [Version Control With Git Lesson](http://swcarpentry.github.io/git-novice/)
   - [Programming in Python Lesson](http://swcarpentry.github.io/python-novice-inflammation/)
   - [The Unix Shell Lesson](http://swcarpentry.github.io/shell-novice/)
