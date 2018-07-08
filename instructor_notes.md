@@ -111,10 +111,10 @@ That's enough changing blocks one at a time, now for loops!
     This will probably be the first introduction of Pythonic indentation,
     so talk about that.
 
-    Then demonstrate doing the same thing with the `.animate` attribute,
+    Then demonstrate doing the same thing with the `.animate()` method,
     which will show the changes as they happen:
 
-        for block in grid.animate:
+        for block in grid.animate():
             block.rgb = (12, 123, 234)
 
 - Exercise 5
@@ -126,7 +126,7 @@ Now to add logic so we can make some blocks different colors from others.
 - Show an example `if` statement by looping over the grid but changing only
   one row. This will involve introducing the `block.row` attribute.
 
-        for block in grid.animate:
+        for block in grid.animate():
             if block.row == 2:
                 block.rgb = (0, 0, 0)
 
@@ -152,7 +152,7 @@ Now to add logic so we can make some blocks different colors from others.
   multiple columns multiple colors, now we want to turn multiple columns the
   same color.
 
-        for block in grid.animate:
+        for block in grid.animate():
             if block.col == 2 or block.col == 4:
                 block.rgb = (50, 50, 50)
 
