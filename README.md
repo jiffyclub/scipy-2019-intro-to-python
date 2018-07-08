@@ -31,3 +31,20 @@ After installing Anaconda you can test your installation using
 If you'd like to do your own setup, we'll be using the following Python libraries:
 
 - [Jupyter Notebook](https://jupyter.org/)
+
+## Useful Links and References
+
+While this tutorial serves as an introduction to Python, you may want to consider reading
+about some concepts in more detail on your own time. Below are some useful references to
+help you get more acquainted with Python and other programming fundamentals.
+
+- [Official Python (3) Documentation](https://docs.python.org/3/)
+  - [Python Tutorial](https://docs.python.org/3/tutorial/index.html)
+    - [Formatting Inputs and Outputs like Strings, Files](https://docs.python.org/3/tutorial/inputoutput.html)
+  - [Built-in Functions](https://docs.python.org/3/library/functions.html)
+  - [Built-in Types](https://docs.python.org/3/library/stdtypes.html)
+- [Software Carpentry's Version Control With Git Lesson](http://swcarpentry.github.io/git-novice/)
+- [Software Carpentry's Programming in Python Lesson](http://swcarpentry.github.io/python-novice-inflammation/)
+- [Software Carpentry's The Unix Shell Lesson](http://swcarpentry.github.io/shell-novice/)
+- [SciPy Lecture Notes - Commonly Used Packages](https://www.scipy-lectures.org/)
+- [How to Think Like a Computer Scientist Tutorial](http://interactivepython.org/runestone/static/thinkcspy/index.html)
