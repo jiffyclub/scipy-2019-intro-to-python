@@ -43,9 +43,10 @@ help you get more acquainted with Python and other programming fundamentals.
     - [Formatting Inputs and Outputs like Strings, Files](https://docs.python.org/3/tutorial/inputoutput.html)
   - [Built-in Functions](https://docs.python.org/3/library/functions.html)
   - [Built-in Types](https://docs.python.org/3/library/stdtypes.html)
-- [Software Carpentry's Version Control With Git Lesson](http://swcarpentry.github.io/git-novice/)
-- [Software Carpentry's Programming in Python Lesson](http://swcarpentry.github.io/python-novice-inflammation/)
-- [Software Carpentry's The Unix Shell Lesson](http://swcarpentry.github.io/shell-novice/)
+- Software Carpentry
+  - [Version Control With Git Lesson](http://swcarpentry.github.io/git-novice/)
+  - [Programming in Python Lesson](http://swcarpentry.github.io/python-novice-inflammation/)
+  - [The Unix Shell Lesson](http://swcarpentry.github.io/shell-novice/)
 - [SciPy Lecture Notes - Commonly Used Packages](https://www.scipy-lectures.org/)
 - [How to Think Like a Computer Scientist Tutorial](http://interactivepython.org/runestone/static/thinkcspy/index.html)
 
