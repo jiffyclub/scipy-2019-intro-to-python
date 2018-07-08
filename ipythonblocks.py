@@ -576,7 +576,7 @@ class BlockGrid(object):
             self.show()
             time.sleep(stop_time)
             yield block
-            clear_output()
+            clear_output(wait=True)
         self.show()
 
     def _repr_html_(self):
