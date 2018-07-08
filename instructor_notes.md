@@ -191,6 +191,37 @@ looping over the whole thing.
 
 - Excercise 12
 
+#### Functions
+
+Explain functions and write a couple of demo ones, e.g.:
+
+```python
+def fahr_to_celsius(temp):
+    return ((temp - 32) * (5/9))
+```
+
+And may an `is_even` function?
+
+- Exercise 13
+
+#### Functions, Lists, Strings, Dictionaries
+
+Want to get into Python standard types.
+Exercise is to write a function that follows a list of directions
+through a grid changing colors as it goes.
+Students are expected to use a dictionary to map direction names
+('up', 'down', 'left', 'right') to changes in position 
+(e.g. `[0, -1]`, `[1, 0]`, etc).
+
+- Strings
+  + Formatting, indexing, slicing
+- Lists
+  + Indexing, slicing, appending
+- Dictionaries
+  + Setting and retrieving values
+
+- Exercise 14
+
 #### Free Play
 
 There are many opportunities for [creativity with `ipythonblocks`][fun blocks],
@@ -208,6 +239,7 @@ If they've learned about [GitHub][] and set up accounts there they can put
 their notebooks in [gists][] and share them via nbviewer. Demo how to do this
 if it seems like something they'd be interested in. You can even show some
 of their work!
+They can also share grids on http://www.ipythonblocks.org/.
 
 ### Building Blocks
 
