@@ -57,5 +57,5 @@ topics:
 
 - [Python Argparse Tutorial (standard library Command Line Interface module)](https://docs.python.org/3/howto/argparse.html)
 - [pdb - The Python Debugger](https://docs.python.org/3/library/pdb.html)
-- [pytest Documentation - a useful testing library](https://docs.pytest.org/en/latest/#documentation)
+- [pytest Documentation - a useful testing library](https://docs.pytest.org/en/latest/)
 - [Python Logging Tutorial](https://docs.python.org/3/howto/logging.html)
