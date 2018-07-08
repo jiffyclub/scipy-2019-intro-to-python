@@ -56,3 +56,21 @@ quadrant of your 20 by 20 grid.
 
 Try to get the same affects as in Exercises 10 & 12, but using slicing instead
 of `for` loops.
+
+## Exercise 13
+
+Write a function that takes a grid as input and returns a new grid with
+the colors inverted (e.g. white becomes black, black becomes white,
+yellow becomes ???).
+
+## Exercise 14
+
+Write a function that can follow a list of directions
+(`'up'`, `'down'`, `'left'`, `'right'`) along a path, changing the color of
+blocks as it goes.
+An example function definition:
+
+```python
+def path_color(grid, path, starting_point, color):
+    ...
+```
