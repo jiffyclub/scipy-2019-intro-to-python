@@ -17,16 +17,29 @@ import sys
 import time
 import uuid
 
+from collections import namedtuple
 from operator import iadd
 from functools import reduce
 
-from IPython.display import HTML, display, clear_output
+from IPython.display import HTML, IFrame, display, clear_output
 from IPython.display import Image as ipyImage
 
-__all__ = ('Block', 'BlockGrid', 'Pixel', 'ImageGrid',
-           'InvalidColorSpec', 'ShapeMismatch', 'show_color',
-           'embed_colorpicker', 'colors', 'fui_colors', '__version__')
-__version__ = '1.8dev'
+__all__ = (
+    'Block',
+    'BlockGrid',
+    'Pixel',
+    'ImageGrid',
+    'InvalidColorSpec',
+    'ShapeMismatch',
+    'show_color',
+    'show_color_triple',
+    'embed_colorpicker',
+    'clear',
+    'colors',
+    'fui_colors',
+    '__version__',
+)
+__version__ = '1.9.0'
 
 _TABLE = ('<style type="text/css">'
           'table.blockgrid {{border: none;}}'
@@ -48,9 +61,9 @@ _DOUBLE_SLICE = 'double slice'
 
 _SMALLEST_BLOCK = 1
 
-_POST_URL = 'http://ipythonblocks.org/post'
-_GET_URL_PUBLIC = 'http://ipythonblocks.org/get/{0}'
-_GET_URL_SECRET = 'http://ipythonblocks.org/get/secret/{0}'
+_POST_URL = 'http://www.ipythonblocks.org/post'
+_GET_URL_PUBLIC = 'http://www.ipythonblocks.org/get/{0}'
+_GET_URL_SECRET = 'http://www.ipythonblocks.org/get/secret/{0}'
 
 
 class InvalidColorSpec(Exception):
@@ -69,6 +82,16 @@ class ShapeMismatch(Exception):
     pass
 
 
+def clear():
+    """
+    Clear the output of the current cell.
+
+    This is a thin wrapper around IPython.display.clear_output.
+
+    """
+    clear_output()
+
+
 def show_color(red, green, blue):
     """
     Show a given color in the IPython Notebook.
@@ -84,14 +107,28 @@ def show_color(red, green, blue):
     display(HTML(div.format(_RGB.format(red, green, blue))))
 
 
+def show_color_triple(rgb_triple):
+    """
+    Show a given color in the IPython Notebook.
+
+    Parameters
+    ----------
+    rgb_triple : iterable
+        A Python iterable containing three integers in the range [0 - 255]
+        representing red, green, and blue colors.
+
+    """
+    return show_color(*rgb_triple)
+
+
 def embed_colorpicker():
     """
     Embed the web page www.colorpicker.com inside the IPython Notebook.
 
     """
-    iframe = ('<iframe src="http://www.colorpicker.com/" '
-              'width="100%" height="550px"></iframe>')
-    display(HTML(iframe))
+    display(
+        IFrame(src='http://www.colorpicker.com/', height='550px', width='100%')
+    )
 
 
 def _color_property(name):
@@ -617,6 +654,10 @@ class BlockGrid(object):
 
         Useful for making an animation or iteratively displaying changes.
 
+        Note that this will leave the grid in place until something replaces
+        it in the same cell. You can use the ``clear`` function to
+        manually clear output.
+
         Parameters
         ----------
         display_time : float
@@ -625,7 +666,7 @@ class BlockGrid(object):
         """
         self.show()
         time.sleep(display_time)
-        clear_output()
+        clear_output(wait=True)
 
     def _calc_image_size(self):
         """
@@ -1116,6 +1157,17 @@ class ImageGrid(BlockGrid):
         return grid
 
 
+# Convenience wrapper for color tuples with attribute access for the
+# component colors
+Color = namedtuple('Color', ['red', 'green', 'blue'])
+
+# This doesn't work on Python 2
+# Color.__doc__ += """\
+# Wrapper for a color tuple that provides .red, .green, and .blue
+# attributes for access to the individual components.
+# """
+
+
 # As a convenience, provide some colors as a custom hybrid
 # dictionary and object with the color names as attributes
 class _ColorBunch(dict):
@@ -1124,6 +1176,7 @@ class _ColorBunch(dict):
 
     """
     def __init__(self, colors):
+        colors = {name: Color(*rgb) for name, rgb in colors.items()}
         super(_ColorBunch, self).__init__(colors)
         self.__dict__.update(colors)
 
