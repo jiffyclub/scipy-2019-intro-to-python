@@ -15,6 +15,21 @@ lesson goes into reading files and building functions.
 [`ipythonblocks.py`][] is packaged here with the lesson so there's nothing
 to install.
 
+## Agenda
+
+- Instructor intro, helper intro
+- Getting to know the class
+  - Science/engineering/other
+  - Life sciences/social sciences/physical sciences
+  - Industry/academics/public sector
+  - Who has already used Python?
+- Broad intro to Python ecosystem and scientific Python
+- Broad intro to Jupyter
+- Colors notebook
+  - Using the notebook
+- Playing with Blocks notebook
+- Building Blocks notebook
+
 ## Lesson Plans
 
 *Note: These notebooks have some code pre-filled, such as imports.
