@@ -5,7 +5,7 @@
 These lessons use [`ipythonblocks`][] to teach the basic usage of Python.
 Making the most of `ipythonblocks` requires an understanding of RGB colors
 so students should start with the "Color" notebook and spend a little time
-practicing mixing their own colors. They may wish to leave this notebook
+mixing their own colors. They may wish to leave this notebook
 open as they move on so they can refer back to their color experiments.
 
 The "Playing with Blocks" lesson goes into Python syntax, especially
@@ -32,8 +32,14 @@ any effect.*
 
 #### Introduction
 
-Two functions are pre-imported: `show_color` and `embed_colorpicker`. Also
-imported is a dictionary called `colors`.
+Three functions are pre-imported:
+
+- `show_color`
+- `show_color_triple`
+- `embed_colorpicker`
+
+Also imported is a dictionary-like object called `colors` (it supports both
+key and attribute access to color tuples).
 
 #### RGB Colors
 
@@ -47,9 +53,10 @@ imported is a dictionary called `colors`.
     *Hint: The RGB definitions of the colors for the exercise are visible in the
     raw Markdown cell.*
 
-- Finally point out that the `colors` dictionary contains all of the
+- Finally point out that the `colors` object contains all of the
   [HTML colors][], keyed by camelcase name.
     - Echoing `colors` in the notebook should pretty-print it.
+    - Tab completion will also show color names
 
 ### Playing with Blocks
 
@@ -60,6 +67,7 @@ imported is a dictionary called `colors`.
 - `for` loops (both iterator and `range` style)
 - `if` statements
 - indexing
+- functions
 
 #### Introduction
 
@@ -197,12 +205,14 @@ Explain functions and write a couple of demo ones, e.g.:
 
 ```python
 def fahr_to_celsius(temp):
-    return ((temp - 32) * (5/9))
+    return ((temp - 32) * (5 / 9))
 ```
 
-And may an `is_even` function?
+And maybe an `is_even` function?
 
 - Exercise 13
+
+- Exercise 14
 
 #### Functions, Lists, Strings, Dictionaries
 
@@ -210,7 +220,7 @@ Want to get into Python standard types.
 Exercise is to write a function that follows a list of directions
 through a grid changing colors as it goes.
 Students are expected to use a dictionary to map direction names
-('up', 'down', 'left', 'right') to changes in position 
+('up', 'down', 'left', 'right') to changes in position
 (e.g. `[0, -1]`, `[1, 0]`, etc).
 
 - Strings
@@ -220,7 +230,7 @@ Students are expected to use a dictionary to map direction names
 - Dictionaries
   + Setting and retrieving values
 
-- Exercise 14
+- Exercise 15
 
 #### Free Play
 

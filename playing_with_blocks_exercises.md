@@ -31,7 +31,7 @@ in the fourth *column* of your grid.
 
 Augment your code from Exercise 6 with an `elif` and an `else` to change the
 color of all blocks in your grid. But make the second column red, the
-third column green, and every other block some other color.
+third column green, and every other block gold.
 
 ## Exercise 8
 
@@ -40,7 +40,8 @@ and fifth rows to black.
 
 ## Exercise 9
 
-Use an `if` with an `and` to turn every black block green.
+Use an `if` with an `and` condition to turn every block that is in the
+fourth column AND black to blue.
 
 ## Exercise 10
 
@@ -54,7 +55,7 @@ quadrant of your 20 by 20 grid.
 
 ## Exercise 12
 
-Try to get the same affects as in Exercises 10 & 12, but using slicing instead
+Try to get the same affects as in Exercises 10 & 11, but using slicing instead
 of `for` loops.
 
 ## Exercise 13
@@ -64,6 +65,13 @@ the colors inverted (e.g. white becomes black, black becomes white,
 yellow becomes ???).
 
 ## Exercise 14
+
+Write a function that takes a grid and a color as input returns a new grid
+that is the input grid with an added border of the given color.
+
+BONUS: Make the color input argument optional.
+
+## Exercise 15
 
 Write a function that can follow a list of directions
 (`'up'`, `'down'`, `'left'`, `'right'`) along a path, changing the color of
