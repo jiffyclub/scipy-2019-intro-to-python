@@ -3,11 +3,6 @@
 ## Overview
 
 These lessons use [`ipythonblocks`][] to teach the basic usage of Python.
-Making the most of `ipythonblocks` requires an understanding of RGB colors
-so students should start with the "Color" notebook and spend a little time
-mixing their own colors. They may wish to leave this notebook
-open as they move on so they can refer back to their color experiments.
-
 The "Playing with Blocks" lesson goes into Python syntax, especially
 indexing, `for` loops, and `if` statements. Finally, the "Building Blocks"
 lesson goes into reading files and building functions.
@@ -25,8 +20,6 @@ to install.
   - Who has already used Python?
 - Broad intro to Python ecosystem and scientific Python
 - Broad intro to Jupyter
-- Colors notebook
-  - Using the notebook
 - Playing with Blocks notebook
 - Building Blocks notebook
 
@@ -36,42 +29,6 @@ to install.
 Explain to the students that even though this code is already written in the
 notebook, they must still explicitly execute those cells for them to have
 any effect.*
-
-### Color
-
-#### Learning Goals
-
-- Use IPython's help features
-- Call functions
-- Understand RGB colors
-
-#### Introduction
-
-Three functions are pre-imported:
-
-- `show_color`
-- `show_color_triple`
-- `embed_colorpicker`
-
-Also imported is a dictionary-like object called `colors` (it supports both
-key and attribute access to color tuples).
-
-#### RGB Colors
-
-- Demonstrate using IPython's help features to see what these do, then explain
-  [RGB colors][RGB] using `show_color` or other aids.
-
-- Let them loose on the exercise, then show them how to use the [color picker
-  tool][colorpicker] available via the `embed_colorpicker` function (requires an
-  internet connection).
-
-    *Hint: The RGB definitions of the colors for the exercise are visible in the
-    raw Markdown cell.*
-
-- Finally point out that the `colors` object contains all of the
-  [HTML colors][], keyed by camelcase name.
-    - Echoing `colors` in the notebook should pretty-print it.
-    - Tab completion will also show color names
 
 ### Playing with Blocks
 
